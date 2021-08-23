@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>GoMovies</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-secondary">
+
+	<nav class="nav bg-dark fixed-top">
+		<div class="row mx-auto">
+			<div class="col-md-4 mx-auto text-center">
+				<a class="navbar-brand mx-auto pt-2 pl-5" href="index.html">
+					<img src="img/logo.jpg" alt="LOGO" width="200" height="80">
+				</a>
+			</div>
+			<div class="row mx-auto">
+				<div class="col pt-4 pb-1">
+					<form action="#" method="POST">
+						<div class="form-group row">
+							<div class="col">
+								<input type="search" class="form-control btn-outline-warning" placeholder="Movie name" required>
+							</div>
+							<div class="col">
+								<select class="movie-genre-select  custom-select btn-outline-warning" name="genre">
+									<option selected disabled>Genres</option>
+								</select>
+							</div>
+							<div class="col">
+								<input type="number" class="form-control btn-outline-warning" placeholder="Year (min)" required>
+								<span class="text-muted m-0">From</span>
+							</div>
+							<div class="col">
+								<input type="number" class="form-control btn-outline-warning" placeholder="Year (max)" required>
+								<span class="text-muted m-0">Until</span>
+							</div>
+							<div class="col">
+								<button class="btn btn-outline-warning px-5" type="submit">Search</button>
+							</div>
+						</div><!-- /.form-group .row -->
+					</form>
+				</div><!-- /.col-md-10 -->
+			</div><!-- /.row -->
+		</div><!-- /.row -->
+	</nav>
+
+	<main>
+		<div class="container">
+			<div class="movies--wrapper  row pt-1">
+
+			</div><!-- /.row .pt-4-->
+		</div><!-- /.container -->
+	</main>
+
+	<template id="movie--template">
+		<div class="col-md-4 py-2">
+			<div class="card text-light bg-dark">
+				<div class="card-header text-dark bg-warning">
+					<h3 class="movie--title"></h3>
+					<strong class="movie--rating  d-block pr-2">
+						<img class="ml-2 mb-2" src="img/star-solid.svg" alt="Rating" width="20">
+					</strong>
+					<span class="movie--year  pr-3"></span>
+					<span class="movie--genre"></span>
+				</div><!-- /.card-header .text-dark .bg-warning -->
+				<div class="card-body">
+					<p class="movie--summary  px-2 txt-hide"></p>
+					<a href="#"><img class="mx-2" src="img/play-circle-regular.svg" alt="Play" width="25">Trelier</a>
+				</div>
+			</div><!-- /.card .text-light .bg-dark -->
+		</div><!-- /.col-md-4 .py-2-->
+	</template>
+
+	<footer class="bg-dark py-5 mt-4">
+		<div class="container">
+      <p class="text-warning text-center h4">2020 &copy;</p>
+    </div>
+	</footer>
+
+	<!-- <script src="js/jquery-3.4.1.min.js"></script> -->
+	<!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+	<script src="js/movies.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>
